@@ -1,0 +1,49 @@
+{
+  "name": "compact-messages",
+  "version": "0.1.0",
+  "description": "Safely trim a long LLM conversation so it fits within a token budget, without ever breaking a tool call away from its result. Framework-agnostic, zero runtime dependencies.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "llm",
+    "ai",
+    "openai",
+    "anthropic",
+    "claude",
+    "context-window",
+    "conversation",
+    "compaction",
+    "token-budget",
+    "chat-history",
+    "ai-sdk"
+  ],
+  "author": "Khurram Khalil",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khurramkhalil34/compact-messages.git"
+  },
+  "bugs": {
+    "url": "https://github.com/khurramkhalil34/compact-messages/issues"
+  },
+  "homepage": "https://github.com/khurramkhalil34/compact-messages#readme",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
